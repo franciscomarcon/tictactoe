@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tic-tac-toe-minimax"
+version = "1.0.0"
+description = "Jogo da velha com interface gráfica em Pygame e IA minimax."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["pygame>=2.5"]
+
+[project.scripts]
+tic-tac-toe = "tic_tac_toe.gui:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
